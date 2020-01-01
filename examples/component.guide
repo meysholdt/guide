@@ -1,0 +1,29 @@
+import React from 'react';
+
+class MyComponent extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  state = { isToggleOn: true };
+
+  handleClick(e) {
+    this.setState((state: { isToggleOn }) => ({
+      isToggleOn: !state.isToggleOn
+    }));
+  }
+
+  render() {
+    return <>
+      <div>I am an element11!</div>
+      <button onClick={this.handleClick}>I am another element</button>
+      {this.state.isToggleOn ? 'ONNN' : 'OFFFF'}
+    </>;
+  }
+}
+
+export function render() {
+  return <MyComponent />;
+}

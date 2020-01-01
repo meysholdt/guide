@@ -1,0 +1,40 @@
+import vscode from 'vscode';
+
+export function runInTerminal(command: string) {
+  let terminal = vscode.window.terminals[0];
+  terminal.show();
+  terminal.sendText(command);
+}
+
+import React from 'react';
+import CSS from 'csstype';
+
+class TerminalProps {
+  command: String
+}
+
+class Terminal extends React.Component<TerminalProps, {}> {
+  render() {
+    const mystyle: CSS.Properties = {
+      cursor: "pointer",
+      color: "#000",
+      background: "#f5f2f0",
+      padding: "2px 5px",
+      display: "inline-block",
+      whiteSpace: "pre-wrap"
+    };
+    return <code
+      style={mystyle}
+      title="Run Command"
+      onClick={runInTerminal.bind({}, this.props.command)}
+    >{this.props.command}</code>;
+  }
+}
+
+export function render() {
+  return <>
+    <h1>Git Cheatsheet</h1>
+    <Terminal command="git status" />
+  </>;
+}
+

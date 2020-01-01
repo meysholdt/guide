@@ -1,0 +1,15 @@
+import vscode from 'vscode';
+
+export function openFile() {
+  const myFile = vscode.Uri.parse("/Volumes/dev/cheatsheet/demo/demo.cheatsheet.ts");
+  vscode.commands.executeCommand("vscode.open",  myFile );
+}
+
+import React from 'react';
+
+export function render() {
+  return <>
+    <h1>Title</h1>
+    <button onClick={openFile}>open File!</button>
+  </>;
+}

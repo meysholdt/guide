@@ -1,0 +1,26 @@
+import React, { Component } from 'react';
+
+class MyComponent extends Component {
+  render(){
+    return (
+      <React.Fragment>
+        <div>I am an element!</div>
+        <button>I am another element</button>
+      </React.Fragment>
+    );
+  }
+}
+
+export function render() {
+  return <body>
+    <h1>Hello World from React1</h1>
+    <p1>
+      foo1 <a href="command:vscode.open?resource=/Volumes/dev/cheatsheet/demo/demo.cheatsheet.ts">action!</a><br/>
+      foo3 <a href="command:vscode.open">action!</a><br/>
+      editorScroll <a href="command:editorScroll?to=down">action!</a><br/>
+      moveActiveEditor <a href="command:moveActiveEditor?to=5">action!</a><br/>
+      foo <a href="command:foobar">foobar!</a><br/>
+      foo other <a href="https://www.heise.de/">heise!</a>
+    </p1>
+  </body>;
+}
