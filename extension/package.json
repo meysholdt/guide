@@ -3,6 +3,7 @@
 	"displayName": "Guide",
 	"description": "Easily create and offer interactive guides for your project.",
 	"version": "0.0.1",
+	"publisher": "meysholdt",
 	"engines": {
 		"vscode": "^1.41.0"
 	},
@@ -38,22 +39,23 @@
 		"test": "node ./out/test/runTest.js"
 	},
 	"dependencies": {
-		"@types/vscode": "^1.41.0",
+		"es-react": "^16.12.0"
+	},
+	"devDependencies": {
+		"glob": "^7.1.5",
+		"react": "^16.12.0",
+		"react-dom": "^16.12.0",
+		"react-scripts": "3.3.0",
+		"typescript": "~3.7.2",
 		"@types/glob": "^7.1.1",
 		"@types/node": "^12.0.0",
 		"@types/react": "^16.9.0",
 		"@types/react-dom": "^16.9.0",
-		"glob": "^7.1.5",
-		"es-react": "^16.12.0",
-		"typescript": "~3.7.2",
-		"react": "^16.12.0",
-		"react-dom": "^16.12.0",
-		"react-scripts": "3.3.0"
-	},
-	"devDependencies": {
+		"@types/vscode": "^1.41.0",
 		"@types/mocha": "^5.2.7",
 		"mocha": "^6.2.2",
 		"tslint": "^5.20.0",
+		"vsce": "1.71.0",
 		"vscode-test": "^1.2.2"
 	}
 }
