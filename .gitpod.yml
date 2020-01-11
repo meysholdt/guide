@@ -1,7 +1,8 @@
 tasks:
   - init: |
-    (cd extension
-      yarn install
-      yarn compile
-    )
+      (cd extension
+        yarn install
+        yarn compile
+      )
 
+      
