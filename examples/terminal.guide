@@ -10,7 +10,8 @@ import React from 'react';
 import CSS from 'csstype';
 
 class TerminalProps {
-  command: String
+  children: String
+  cwd?: String
 }
 
 class Terminal extends React.Component<TerminalProps, {}> {
@@ -26,15 +27,20 @@ class Terminal extends React.Component<TerminalProps, {}> {
     return <code
       style={mystyle}
       title="Run Command"
-      onClick={runInTerminal.bind({}, this.props.command)}
-    >{this.props.command}</code>;
+      onClick={runInTerminal.bind({}, this.props.children)}
+    >{this.props.children}</code>;
   }
 }
 
 export function render() {
   return <>
     <h1>Git Cheatsheet</h1>
-    <Terminal command="git status" />
+    <p>
+      <Terminal>git status</Terminal>
+    </p>
+    <p>
+      <Terminal cwd=".">cat minimal.guide</Terminal>
+    </p>
   </>;
 }
 
